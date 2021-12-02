@@ -134,9 +134,32 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === 'o' || string[i] === 'O'); {
+      string = string[i].replace(/string[i]/g, '4');
+    }
+  }
+  return string;  
 }
+
+ console.log(encode('Too much, never enough'))
+
+// let text = "Mr Blue has a blue house and a blue car";
+// let result = text.replace(/blue/g, "red");
+// console.log(result);
+
+
+
+// let listOfwords = string.split('')
+// let stringTogether = listOfwords.join('');
+// for (i = 0; i < string.length; i += 1) {
+  //console.log(string[i]);
+//}
+// console.log(listOfwords);
+// console.log(stringTogether);
+
 function decode() {
   // seu código aqui
 }
