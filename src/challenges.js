@@ -11,8 +11,8 @@ function compareTrue(booleano1, booleano2) {
 }
  
 // console.log(compareTrue(false, true));
-console.log(compareTrue(false, false));
-console.log(compareTrue(true, true));
+// console.log(compareTrue(false, false));
+// console.log(compareTrue(true, true));
 
 
 
@@ -25,14 +25,22 @@ function calcArea(base, height) {
 // console.log(calcArea(10, 50));
 // console.log(calcArea(5, 2));
 // console.log(calcArea(51, 1))
+
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(' ');
+  console.log(array);
 }
 
+// splitSentence('go Trybe');
+// splitSentence('vamo que vamo');
+// splitSentence('foguete');
+
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  
 }
 
 // Desafio 5
