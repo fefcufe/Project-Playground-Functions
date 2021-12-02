@@ -40,8 +40,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  
+  let lastPosition = array.length - 1;
+  let result = array[lastPosition] + ', ' + array[0];
+  console.log(result);
 }
+
+// concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+// concatName(['foguete', 'não', 'tem', 'ré']);
+// concatName(['captain', 'my', 'captain']);
 
 // Desafio 5
 function footballPoints() {
