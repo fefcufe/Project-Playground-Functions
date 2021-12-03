@@ -46,17 +46,35 @@ function triangleCheck(lineA, lineB, lineC) {
   return result;
   }
   
-console.log(triangleCheck(10,14,8));
+// console.log(triangleCheck(10,14,8));
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let isInteger = /\d+/g; // cria uma variavel que identifica dígitos  
+  let matches = string.match(isInteger); // .match compara a variável de digitos isInteger com a string dada como parametro e armazena as coincidencias na lista matches 
+  let glassOfWater = 0;
+
+  for (let i = 0; i < matches.length; i += 1) {
+    matches[i] = parseInt(matches[i], 10);
+  }
+
+  for (let k = 0; k < matches.length; k += 1) {
+    glassOfWater += matches[k];
+  }
+  if (glassOfWater === 1) {
+    return glassOfWater + ' copo de água'
+  } else {
+    return glassOfWater + ' copos de água'
+  }  
+
 }
 
+// console.log(hydrate('2 cervejas, 3 caipirinhas'))
+
 module.exports = {
- // generatePhoneNumber,
+  generatePhoneNumber,
   techList,
- // hydrate,
+  hydrate,
   triangleCheck,
 };
