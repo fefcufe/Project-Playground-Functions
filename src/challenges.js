@@ -30,7 +30,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let array = string.split(' ');
-  console.log(array);
+  return (array);
 }
 
 // splitSentence('go Trybe');
@@ -135,34 +135,47 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  
-  for (let i = 0; i < string.length; i += 1) {
-    if (string[i] === 'o' || string[i] === 'O'); {
-      string = string[i].replace(/string[i]/g, '4');
+  let listOfletters = string.split('');
+  for (i = 0; i < listOfletters.length; i += 1) {
+    if (listOfletters[i] === 'A' || listOfletters[i] === 'a') {
+      listOfletters[i] = 1;
+    } else if (listOfletters[i] === 'E' || listOfletters[i] === 'e') {
+      listOfletters[i] = 2;
+    } else if (listOfletters[i] === 'I' || listOfletters[i] === 'i') {
+      listOfletters[i] = 3;
+    } else if (listOfletters[i] === 'O' || listOfletters[i] === 'o') {
+      listOfletters[i] = 4;
+    } else if (listOfletters[i] === 'U' || listOfletters[i] === 'u') {
+      listOfletters[i] = 5;
     }
   }
-  return string;  
+  let stringTogether = listOfletters.join('');
+  return stringTogether;
 }
 
- console.log(encode('Too much, never enough'))
-
-// let text = "Mr Blue has a blue house and a blue car";
-// let result = text.replace(/blue/g, "red");
-// console.log(result);
+// console.log(encode('Hi there!'))
 
 
-
-// let listOfwords = string.split('')
-// let stringTogether = listOfwords.join('');
-// for (i = 0; i < string.length; i += 1) {
-  //console.log(string[i]);
-//}
-// console.log(listOfwords);
-// console.log(stringTogether);
-
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let listOfletters = string.split('');
+  for (i = 0; i < listOfletters.length; i += 1) {
+    if (listOfletters[i] === '1') {
+      listOfletters[i] = 'a';
+    } else if (listOfletters[i] === '2') {
+      listOfletters[i] = 'e';
+    } else if (listOfletters[i] === '3') {
+      listOfletters[i] = 'i';
+    } else if (listOfletters[i] === '4') {
+      listOfletters[i] = 'o';
+    } else if (listOfletters[i] === '5') {
+      listOfletters[i] = 'u';
+    }
+  }
+  let stringTogether = listOfletters.join('');
+  return stringTogether;
 }
+
+// console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
